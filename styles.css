@@ -3,29 +3,39 @@
   src: url("harry_p/HARRYP__.TTF"); }
 
 body {
-  padding: 10% 20%;
+  max-width: 800px;
+  min-height: 75vh;
+  margin: 50px auto;
+  padding: 5% 10%;
   color: #F9F9F9;
   background: url(img/wood_bg.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  border: rgba(138,90,48,1) 5px solid;
+  /* border-image: url('img/star.svg');
+  border-image-slice: 30;
+  border-image-width: 30px;
+  border-image-outset: 1; */
+  border-image-repeat: round;
   font-family: 'EB Garamond', Merriweather, serif;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
   text-shadow: 3px 3px 5px black;
 }
 
 h1 {
   margin: 0;
-  color: #F9CA55;
+  color: #faca55;
   font-family: HARRYP, serif;
-  font-size: 4em;
+  font-size: 5em;
   letter-spacing: 5px;
   text-shadow:  3px 3px 6px black;
 }
 
 h2 {
+  margin: 0;
   font-family: HARRYP, serif;
   font-size: 2em;
   letter-spacing: 2px;
@@ -39,9 +49,9 @@ h1 span.tiny {
 button {
   min-width: 300px;
   margin: 0.25em;
-  padding: 0.5em 1em;
+  padding: 1em 2em;
   color: white;
-  background: linear-gradient(rgba(186,137,59,1) 0%, rgba(138,90,48,1) 80%);
+  background: linear-gradient(#c1903c 0%, #8b5930 80%);
   border-radius: 4px;
   font-family: 'EB Garamond', Merriweather, serif;
   font-size: 1em;
@@ -52,6 +62,21 @@ button {
 .main-game,
 .score {
   display: none;
+}
+
+.header,
+.score-inner {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.timer {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  background-image: url('img/paper.svg') no-repeat;
 }
 
 .garbage-container {
@@ -95,4 +120,9 @@ button {
 
 .special {
   background: red;
+}
+
+.final-score {
+  padding-top: 20px;
+  font-size: 6em;
 }

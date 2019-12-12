@@ -9,12 +9,22 @@
   </head>
   <body>
     <header class="header">
-      <h1>Sorting <span class="tiny">t</span>Hat</h1>
+      <img src="img/hat.svg">
+      <div>
+        <h1>Sorting <span class="tiny">t</span>Hat</h1>
+        <h2>Mode Hack '19</h2>
+      </div>
       <p>Which bin will you be placed into?</p>
-      <button type="button" class="start" onclick="handleStart()">Start</button>
+      <button type="button" class="start" onclick="handleStart()">Start Quiz</button>
     </header>
     <main>
       <section class="main-game">
+        <div class="timer">
+          <p class="timer-min"></p>
+          <p class="timer-sec2"></p>
+          <p class="timer-sec1"></p>
+        </div>
+        <p>Which bin?</p>
         <h1 class="garbage-title"></h1>
         <div class="garbage-container">
           <img src="" class="garbage-img">
@@ -27,9 +37,14 @@
         </div>
       </section>
       <section class="score">
-        <h2>Your Eco Impact</h2>
-        <h1 class="final-score"></h1>
-        <button type="button" onclick="location.reload()">Restart</button>
+        <div class="score-inner">
+          <img src="img/hat.svg">
+          <div>
+            <h2>Your Eco Impact</h2>
+            <h1 class="final-score"></h1>
+          </div>
+          <button type="button" onclick="location.reload()">Start Over</button>
+        </div>
       </section>
     </main>
     <script
