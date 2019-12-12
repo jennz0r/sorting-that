@@ -32,19 +32,20 @@ let numItems = 2;
 let counter = 0;
 let wrongAnswers = 0;
 let time = 0;
+let timeID = null;
 
 // Start the game
 // Show the first garbage image, 
 let handleStart = () => {
   $('.timer-min').html(time);
-  time = setInterval(timer, 1000);
+  timeID = setInterval(timer, 1000);
   $('.header').fadeOut(300);
   $('.main-game').fadeIn(1500);
   showNextImg();
 }
 
 let endGame = () => {
-  clearInterval(time);
+  clearInterval(timeID);
   $('.main-game').fadeOut(300);
   $('.score').fadeIn(1500);
 
@@ -76,7 +77,6 @@ let handleBinClick = (e) => {
 }
 
 let timer = () => {
-  console.log(time);
   time++;
   $('.timer-min').html(time);
 }
