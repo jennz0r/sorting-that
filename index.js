@@ -1,34 +1,61 @@
 // List of garbage images and the correct bin as objects
 let garbage = [
   {
-    name: 'Green Bottle',
-    path: 'img/garbage/green_bottle.png',
+    name: 'Ball Chain',
+    path: 'img/garbage/ball_chain.png',
     bin: 'recycle',
     err: false
-  },
-  {
+  }, {
     name: 'Battery',
     path: 'img/garbage/battery.png',
     bin: 'special',
     err: false
-  },
-  {
-    name: 'Batt 1',
-    path: 'img/garbage/battery.png',
-    bin: 'special',
+  }, {
+    name: 'Beer Bottle',
+    path: 'img/garbage/beer_bottle.png',
+    bin: 'recycle',
     err: false
-  },
-  {
-    name: 'Batt 2',
-    path: 'img/garbage/battery.png',
-    bin: 'special',
+  }, {
+    name: 'Cat Food Can',
+    path: 'img/garbage/cat_food_can.png',
+    bin: 'recycle',
+    err: false
+  }, {
+    name: 'Deodorant Container',
+    path: 'img/garbage/deodorant_container.png',
+    bin: 'recycle',
+    err: false
+  }, {
+    name: 'Dirty Paper Plate',
+    path: 'img/garbage/dirty_paper_plate.png',
+    bin: 'compost',
+    err: false
+  }, {
+    name: 'Milk Jug',
+    path: 'img/garbage/milk_jug.png',
+    bin: 'recycle',
+    err: false
+  }, {
+    name: 'Pamphlet',
+    path: 'img/garbage/pamphlet.png',
+    bin: 'recycle',
+    err: false
+  }, {
+    name: 'Plastic Utensils',
+    path: 'img/garbage/plastic_utensils.png',
+    bin: 'recycle',
+    err: false
+  }, {
+    name: 'Tic Tac Container',
+    path: 'img/garbage/tictac_container.png',
+    bin: 'recycle',
     err: false
   }
 ]
 
 // Number of images to sort
 // This may change to be selectable in the future.
-let numItems = 2;
+let numItems = 10;
 let counter = 0;
 let wrongAnswers = 0;
 let time = 0;
