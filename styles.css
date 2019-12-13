@@ -159,16 +159,28 @@ button {
 .errors {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .errors>div {
-  flex: 0 25%;
+  flex: 1 0 20%;
+  margin: 10px;
+}
+
+.err-name {
+  font-size: 1.2em;
 }
 
 .errors>div>img {
   width: 50px;
   height: 50px;
+}
+
+.err-bin {
+  margin: 0 auto 25px;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .end-btns {
