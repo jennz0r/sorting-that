@@ -96,7 +96,9 @@ let garbage = [
     bin: 'landfill',
     err: false
   }
-]
+];
+
+let sounds = ['leviosa', 'coucou', 'troll'];
 
 // Number of images to sort
 // This may change to be selectable in the future.
@@ -123,6 +125,7 @@ let endGame = () => {
 
   let finalScore = time + wrongAnswers;
   $('.final-score').html(finalScore);
+  document.getElementById("theme").play();
   displayErrors();
 }
 
@@ -168,6 +171,9 @@ let handleBinClick = (e) => {
   // If the bin DOES NOT match the bin of the item,
   // do add time to the score
   if (e.target.name != garbage[counter].bin) {
+    debugger;
+    // sounds[Math.floor(Math.random()*sounds.length)]
+    document.getElementById("leviosa").play();
     garbage[counter].err = true;
     wrongAnswers++;
   }
