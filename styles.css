@@ -188,6 +188,8 @@ button {
 }
 
 .info-btn {
+  display: flex;
+  justify-content: center;
   flex-grow: 1;
   text-align: center;
 }
