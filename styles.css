@@ -66,13 +66,15 @@ button {
 
 .main,
 .main-game,
-.score {
+.score,
+.scoring {
   display: none;
 }
 
 .header,
 .main-game-stuff,
-.score-inner {
+.score-inner,
+.scoring-inner {
   height: 85vh;
   display: flex;
   flex-direction: column;
@@ -152,4 +154,42 @@ button {
 .final-score {
   padding-top: 20px;
   font-size: 6em;
+}
+
+.errors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errors>div {
+  flex: 0 25%;
+}
+
+.errors>div>img {
+  width: 50px;
+  height: 50px;
+}
+
+.end-btns {
+  display: flex;
+}
+
+.info-btn {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.start-over-btn {
+  flex-grow: 15;
+}
+
+.info-btn-text {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: white solid 3px;
+  font-weight: 900;
+  text-transform: lowercase;
 }

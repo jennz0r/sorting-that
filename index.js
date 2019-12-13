@@ -3,7 +3,7 @@ let garbage = [
   {
     name: 'Ball Chain',
     path: 'img/garbage/ball_chain.png',
-    bin: 'recycle',
+    bin: 'landfill',
     err: false
   }, {
     name: 'Battery',
@@ -21,7 +21,17 @@ let garbage = [
     bin: 'recycle',
     err: false
   }, {
-    name: 'Deodorant Container',
+    name: 'Coffee Grounds',
+    path: 'img/garbage/coffee_grounds.png',
+    bin: 'compost',
+    err: false
+  }, {
+    name: 'Paper Cup & Sleeve',
+    path: 'img/garbage/cup_and_sleeve.png',
+    bin: 'recycle',
+    err: false
+  }, {
+    name: 'Deodorant',
     path: 'img/garbage/deodorant_container.png',
     bin: 'recycle',
     err: false
@@ -41,8 +51,33 @@ let garbage = [
     bin: 'recycle',
     err: false
   }, {
+    name: 'Used Paper Plate',
+    path: 'img/garbage/paper_plate.png',
+    bin: 'compost',
+    err: false
+  }, {
+    name: 'Paper Towel Roll',
+    path: 'img/garbage/paper_towel_roll.png',
+    bin: 'recycle',
+    err: false
+  }, {
     name: 'Plastic Utensils',
     path: 'img/garbage/plastic_utensils.png',
+    bin: 'recycle',
+    err: false
+  }, {
+    name: 'Plastic? Lid',
+    path: 'img/garbage/plastic_coffee_lid.png',
+    bin: 'recycle',
+    err: false
+  }, {
+    name: 'Plastic? Cup',
+    path: 'img/garbage/plastic_cup.png',
+    bin: 'compost',
+    err: false
+  }, {
+    name: 'Soup Can',
+    path: 'img/garbage/soup_can.png',
     bin: 'recycle',
     err: false
   }, {
@@ -50,12 +85,22 @@ let garbage = [
     path: 'img/garbage/tictac_container.png',
     bin: 'recycle',
     err: false
+  }, {
+    name: 'Toilet Paper Roll',
+    path: 'img/garbage/toilet_paper_roll.png',
+    bin: 'recycle',
+    err: false
+  }, {
+    name: 'Wrapper',
+    path: 'img/garbage/wrapper.png',
+    bin: 'landfill',
+    err: false
   }
 ]
 
 // Number of images to sort
 // This may change to be selectable in the future.
-let numItems = 10;
+let numItems = 18;
 let counter = 0;
 let wrongAnswers = 0;
 let time = 0;
@@ -77,6 +122,32 @@ let endGame = () => {
 
   let finalScore = time + wrongAnswers;
   $('.final-score').html(finalScore);
+  displayErrors();
+}
+
+let displayErrors = () => {
+  garbage.forEach((piece) => {
+    if (piece.err) {
+      let $item = $('<div class="err-container" />');
+      let $name = $('<h2 class="err-name" />').text(piece.name);
+      let $img = $('<img class="err-img">').attr('src', piece.path);
+      let $bin = $('<p class="err-bin" />').text(piece.bin);
+      $item.append($name);
+      $item.append($img);
+      $item.append($bin);
+      $('.errors').append($item);
+    }
+  });
+}
+
+let handleInfo = () => {
+  $('.score').fadeOut(300);
+  $('.scoring').fadeIn(1500);
+}
+
+let handleBack = () => {
+  $('.scoring').fadeOut(200);
+  $('.score').fadeIn(1500);
 }
 
 // For each garbage image, display the image
@@ -96,6 +167,7 @@ let handleBinClick = (e) => {
   // If the bin DOES NOT match the bin of the item,
   // do add time to the score
   if (e.target.name != garbage[counter].bin) {
+    garbage[counter].err = true;
     wrongAnswers++;
   }
   counter++;

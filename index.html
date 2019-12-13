@@ -47,7 +47,21 @@
             <h2>Your Eco Impact</h2>
             <h1 class="final-score"></h1>
           </div>
-          <button type="button" onclick="location.reload()">Start Over</button>
+          <div class="end-btns">
+            <button class="info-btn" type="button" onclick="handleInfo()">
+              <span class="info-btn-text">i</span>
+              <span hidden>Info</span>
+            </button>
+            <button class="start-over-btn" type="button" onclick="location.reload()">Start Over</button>
+          </div>
+        </div>
+      </section>
+      <section class="scoring">
+        <div class="scoring-inner">
+          <img src="img/hat.svg">
+          <h1>Who wasn't correctly sorted?</h1>
+          <div class="errors"></div>
+          <button type="button" onclick="handleBack()">Back</button>
         </div>
       </section>
     </main>
