@@ -47,11 +47,17 @@ h1 span.tiny {
 }
 
 button {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   min-width: 100px;
   margin: 0.25em;
-  padding: 0.5em 1em;
+  padding: 0.75em 1em;
   color: white;
   background: linear-gradient(-180deg, rgb(193, 144, 60) 0%, rgb(139, 89, 48) 100%);
+  outline: 1px solid #fff;
+  outline-offset: -5px;
+  border: none;
   border-radius: 4px;
   font-family: 'EB Garamond', Merriweather, serif;
   font-size: 1em;
