@@ -51,7 +51,7 @@ button {
   margin: 0.25em;
   padding: 0.5em 1em;
   color: white;
-  background: linear-gradient(#c1903c 0%, #8b5930 80%);
+  background: linear-gradient(-180deg, rgb(193, 144, 60) 0%, rgb(139, 89, 48) 100%);
   border-radius: 4px;
   font-family: 'EB Garamond', Merriweather, serif;
   font-size: 1em;
@@ -124,19 +124,23 @@ button {
 }
 
 .landfill {
-  background: black;
+  background: linear-gradient(-180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.25) 100%)
+  rgb(32, 31, 31);
 }
 
 .recycle {
-  background: blue;
+  background: linear-gradient(-180deg, rgba(255, 255, 255, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%)
+  rgb(58, 80, 165);
 }
 
 .compost {
-  background: green;
+  background: linear-gradient(-180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.25) 100%)
+  rgb(32, 114, 56);
 }
 
 .special {
-  background: red;
+  background: linear-gradient(-180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.25) 100%)
+  rgb(240, 32, 35);
 }
 
 .final-score {
