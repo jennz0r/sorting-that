@@ -109,6 +109,7 @@ let timeID = null;
 // Start the game
 // Show the first garbage image, 
 let handleStart = () => {
+  document.getElementById("theme").play();
   timeID = setInterval(timer, 1000);
   $('.header').fadeOut(300);
   $('.main-game').fadeIn(1500);
