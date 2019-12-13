@@ -3,10 +3,10 @@
   src: url("harry_p/HARRYP__.TTF"); }
 
 body {
-  max-width: 800px;
-  min-height: 75vh;
-  margin: 50px auto;
-  padding: 5% 10%;
+  max-width: 700px;
+  height: 85vh;
+  margin: 30px auto 20px;
+  padding: 30px 20px;
   color: #F9F9F9;
   background: url(img/wood_bg.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -29,7 +29,7 @@ h1 {
   margin: 0;
   color: #faca55;
   font-family: HARRYP, serif;
-  font-size: 5em;
+  font-size: 3.5em;
   letter-spacing: 5px;
   text-shadow:  3px 3px 6px black;
 }
@@ -37,7 +37,7 @@ h1 {
 h2 {
   margin: 0;
   font-family: HARRYP, serif;
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 2px;
   text-shadow:  1px 1px 3px black;
 }
@@ -47,9 +47,9 @@ h1 span.tiny {
 }
 
 button {
-  min-width: 300px;
+  min-width: 100px;
   margin: 0.25em;
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   color: white;
   background: linear-gradient(#c1903c 0%, #8b5930 80%);
   border-radius: 4px;
@@ -65,24 +65,42 @@ button {
 }
 
 .header,
+.main-game-stuff,
 .score-inner {
-  height: 75vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .timer {
+  display: flex;
   position: absolute;
-  top: 5px;
+  top: -45px;
   left: 50%;
-  background-image: url('img/paper.svg') no-repeat;
+  margin-left: -100px;
+  font-size: 1.5em;
+}
+
+.timer-min,
+.timer-sec2,
+.timer-sec1 {
+  padding: 15px 15px 18px 30px;
+  color: #5f3b1f;
+  text-shadow: none;
+  background: url('img/paper.svg') no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.which-bin {
+  margin-bottom: 5px;
 }
 
 .garbage-container {
-  width: 50%;
+  width: 25%;
   margin: 1% auto;
-  padding: 20%;
+  padding: 10%;
   background-image: url(img/shield.svg);
   background-repeat: no-repeat;
   background-size: contain;

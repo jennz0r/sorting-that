@@ -14,26 +14,30 @@
         <h1>Sorting <span class="tiny">t</span>Hat</h1>
         <h2>Mode Hack '19</h2>
       </div>
-      <p>Which bin will you be placed into?</p>
-      <button type="button" class="start" onclick="handleStart()">Start Quiz</button>
+      <div><p>Into which bin will you be placed?</p>
+      <button type="button" class="start" onclick="handleStart()">Start Quiz</button></div>
     </header>
     <main>
       <section class="main-game">
-        <div class="timer">
-          <p class="timer-min"></p>
-          <p class="timer-sec2"></p>
-          <p class="timer-sec1"></p>
-        </div>
-        <p>Which bin?</p>
-        <h1 class="garbage-title"></h1>
-        <div class="garbage-container">
-          <img src="" class="garbage-img">
-        </div>
-        <div class="button-container">
-          <button type="button" class="landfill" name="landfill" onclick="handleBinClick(event)">Landfill</button>
-          <button type="button" class="recycle" name="recycle" onclick="handleBinClick(event)">Recycle</button>
-          <button type="button" class="compost" name="compost" onclick="handleBinClick(event)">Compost</button>
-          <button type="button" class="special" name="special" onclick="handleBinClick(event)">Special</button>
+        <div class="main-game-stuff">
+          <div class="timer">
+            <p class="timer-min">0</p>
+            <p class="timer-sec2">0</p>
+            <p class="timer-sec1">0</p>
+          </div>
+          <div>
+            <p class="which-bin">Which bin?</p>
+            <h1 class="garbage-title"></h1>
+          </div>
+          <div class="garbage-container">
+            <img src="" class="garbage-img">
+          </div>
+          <div class="button-container">
+            <button type="button" class="landfill" name="landfill" onclick="handleBinClick(event)">Landfill</button>
+            <button type="button" class="recycle" name="recycle" onclick="handleBinClick(event)">Recycle</button>
+            <button type="button" class="compost" name="compost" onclick="handleBinClick(event)">Compost</button>
+            <button type="button" class="special" name="special" onclick="handleBinClick(event)">Special</button>
+          </div>
         </div>
       </section>
       <section class="score">

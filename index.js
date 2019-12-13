@@ -37,7 +37,6 @@ let timeID = null;
 // Start the game
 // Show the first garbage image, 
 let handleStart = () => {
-  $('.timer-min').html(time);
   timeID = setInterval(timer, 1000);
   $('.header').fadeOut(300);
   $('.main-game').fadeIn(1500);
@@ -78,5 +77,7 @@ let handleBinClick = (e) => {
 
 let timer = () => {
   time++;
-  $('.timer-min').html(time);
+  $('.timer-min').html(Math.floor(time/60));
+  $('.timer-sec2').html(((time%60) - (time%60)%10)/10);
+  $('.timer-sec1').html((time%60)%10);
 }
