@@ -98,7 +98,7 @@ let garbage = [
   }
 ];
 
-let sounds = ['leviosa', 'coucou', 'troll'];
+let sounds = ['leviosa', 'coucou', 'no'];
 
 // Number of images to sort
 // This may change to be selectable in the future.
@@ -171,8 +171,7 @@ let handleBinClick = (e) => {
   // If the bin DOES NOT match the bin of the item,
   // do add time to the score
   if (e.target.name != garbage[counter].bin) {
-    debugger;
-    // sounds[Math.floor(Math.random()*sounds.length)]
+    // document.getElementById(sounds[Math.floor(Math.random()*sounds.length)]).play();
     document.getElementById("leviosa").play();
     garbage[counter].err = true;
     wrongAnswers++;
